@@ -42,13 +42,14 @@ const Navbar = () => {
         });
     }, [])
     return (
-        <nav className='fixed top-0 w-full z-40 backdrop-blur-[1px] flex justify-between gap-10' style={{
+        <nav className={`fixed top-0 w-full z-40 flex justify-between gap-10`} style={{
             background: `rgba(51, 65, 85, ${backgroundTransparacy})`,
             padding: `${padding}px 50px`,
             boxShadow: `0px 0px 20px 6px rgba(51, 65, 85, ${boxShadow})`,
+            backdropFilter: `blur(${backgroundTransparacy * 8}px)`,
         }}>
             <a href="#hero">
-                <img src="/logo.png" alt="" className='h-16' />
+                <img src="/logo192.png" alt="" className='h-16' />
             </a>
 
             <div className='flex gap-5 items-center'>
