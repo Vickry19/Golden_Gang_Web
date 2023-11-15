@@ -3,10 +3,12 @@ import axios from 'axios';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Check from './components/Check';
+import Contact from './components/Contact';
+import 'aos/dist/aos.css';
 
 function App() {
   AOS.init({
-    offset: '100'
+    
   });
 
   axios.defaults.baseURL = 'http://localhost:8000';
@@ -18,6 +20,8 @@ function App() {
     <Hero />
 
     <Check />
+
+    <Contact />
     </>
   );
 }

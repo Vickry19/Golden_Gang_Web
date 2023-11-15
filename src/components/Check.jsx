@@ -35,11 +35,11 @@ const Check = () => {
 
     return (
         <>
-        <section id="check" className="bg-white py-32 px-5">
+        <section id="check" className="bg-slate-700 py-32 px-5">
             <h2 className='text-center font-semibold text-yellow-400 text-4xl mb-10'>Check Website</h2>
 
             <div className='max-w-[700px] mx-auto'>
-                <form className='relative mb-2' onSubmit={handleSubmit}>
+                <form className='relative mb-2' onSubmit={handleSubmit} data-aos="fade-up">
                     <label htmlFor="check-input" className='absolute top-1/2 -translate-y-1/2 left-5'>
                         <i className="fa-solid fa-globe text-2xl text-yellow-400"></i>
                     </label>
@@ -51,16 +51,16 @@ const Check = () => {
                 </form>
 
                 <div className="flex justify-between mb-10">
-                    <p className='text-gray-400'>ex: https://google.com</p>
+                    <p className='text-gray-400' data-aos="fade-right">ex: https://google.com</p>
 
-                    <button className='px-4 py-2 rounded-md border border-yellow-400 text-yellow-400' onClick={() => setIsOpen(true)}>
+                    <button className='px-4 py-2 rounded-md border border-yellow-400 text-yellow-400' onClick={() => setIsOpen(true)} data-aos="fade-left">
                         <i className="fa-solid fa-clock-rotate-left mr-2"></i> History
                     </button>
                 </div>
 
                 {isLoading
-                    ? <h4 className="text-center font-semibold text-2xl">Loading...</h4>
-                    : <h4 className="text-center font-semibold text-2xl">{result.message}</h4>}
+                    ? <h4 className="text-center font-semibold text-2xl text-white">Loading...</h4>
+                    : <h4 className="text-center font-semibold text-2xl text-white">{result.message}</h4>}
             </div>
         </section>
 
